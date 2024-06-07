@@ -25,6 +25,9 @@ library(DT)
 # Package for Excel Data Creation
 library(openxlsx)
 
+# Package for generating HTML
+library(htmltools)
+
 # Run Modules Files ---------------------------------------------------------------------------
 # This section runs the modules and unless the folder name changes, it doesn't need to be changed
 # It also loads in useful functions for dashboard creation
