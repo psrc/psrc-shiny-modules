@@ -344,6 +344,7 @@ head {
 
 .links-container {
  padding: .75rem 2rem;
+ border-bottom: 2px solid #dedede;
 }
 
 .links {

@@ -37,7 +37,7 @@ $(".panel-heading").focusout(function() {
 });
 $(".links-container").focusout(function() {
   $(this).css("border-left", "0px solid #F2F2F2")
-  $(this).css("border-bottom", "2px solid #F2F2F2")
+  $(this).css("border-bottom", "2px solid #dedede")
   $(".links", this).css("color", "#00716C")
   
 });
