@@ -55,3 +55,15 @@ ntd_data <- readRDS("data/ntd_data.rds")
 # Section for creating the values needed in any dropdowns, lists, etc.
 ntd_metric_list <- as.character(unique(ntd_data$metric))
 ntd_mode_list <- ntd_data |> select("variable") |> filter(variable != "All Transit Modes") |> distinct() |> pull()
+
+# Other ----
+transit_links <- c("Community Transit" = "https://www.communitytransit.org/",
+                   "Everett Transit" = "https://everetttransit.org/",
+                   "King County Metro" = "https://kingcounty.gov/en/dept/metro",
+                   "Kitsap Transit" = "https://www.kitsaptransit.com/",
+                   "Pierce Transit" = "https://www.piercetransit.org/",
+                   "Pierce County Ferry" = "https://www.piercecountywa.gov/1793/Ferry",
+                   "Sound Transit" = "https://www.soundtransit.org/",
+                   "Washington State Ferries" = "https://wsdot.wa.gov/travel/washington-state-ferries",
+                   "Transit Planning at PSRC" = "https://www.psrc.org/our-work/transit"
+)

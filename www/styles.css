@@ -242,18 +242,6 @@ head {
   text-decoration-thickness: 2px;
 }
 
-
-.panel-default .panel-heading{
-  background-color: #F2F2F2;
-  border-color: #F05A28;
-  border-style: dashed;
-  border-width: thick;
-}
-
-.panel-collapse{
-  background-color: #E4E4E4;
-}
-
 #sidebar {
     background-color: white;
     position: fixed;
@@ -323,6 +311,67 @@ head {
   margin-bottom: 1rem;
   color: #2F3030;
 }
+
+/* panel refers to bsCollapse object*/
+.panel {
+  border: none;
+}
+
+.panel-default {
+  border-color: white;
+}
+
+.panel-default > .panel-heading {
+ border-color: white;
+ background-color: white;
+ padding: 1.25rem 2rem;
+}
+
+.panel-title {
+ font-weight: 600;
+ color: #00716C;
+ font-family: "Poppins";
+ font-size: 12pt;
+}
+
+.panel-collapse {
+  background-color: #F2F2F2;
+}
+
+.panel-body {
+ padding: 0rem;  
+}
+
+.links-container {
+ padding: .75rem 2rem;
+}
+
+.links {
+ font-weight: 600;
+ color: #00716C;
+ font-family: "Poppins";
+ font-size: 12pt;
+ padding: 0rem 2rem;
+}
+
+
+/*https://stackoverflow.com/questions/73255149/can-i-add-an-arrow-icon-to-my-bscollapsepanel-in-r-shiny*/
+/*https://github.com/FortAwesome/Font-Awesome/blob/master/css/all.css*/
+
+.panel-heading .panel-title a.collapsed:after {
+      content:"\f067"; 
+      transition: .5s ease-in-out;
+}
+
+.panel-heading .panel-title a:after {
+      content:"\f068";
+      font-family:"Font Awesome 5 Free";
+      color: #2F3030;
+      text-align: right;
+      float:right;
+      transition: .5s ease-in-out;
+}
+
 
 
 
