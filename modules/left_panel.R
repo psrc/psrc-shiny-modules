@@ -41,29 +41,11 @@ left_panel_ui <- function(id) {
                ),
     
     # Contact ----
-    div(class = "contacts-container",
-      p(class = "m-menu__title", "Connect With Us"),
-      
-      div(class = "contacts",
-          
-          div(class = "contacts-details",
-              div(  
-                div(p(paste(cdf$contact_name, "-", cdf$contact_title))),
-                
-                div(class = "contacts-icons",
-                    div(icon("envelope"),
-                        tags$a(class = "links", href = paste0("mailto:",cdf$contact_email,"?"), "Email")),
-                    
-                    div(
-                      icon("phone-volume"),  
-                      cdf$contact_phone)
-                ) # end div
-              ) # end div
-          ) # end div
-          
-          
-      ) # end div
-    ) # end div
+    contact_container_ui('contact-data',
+                         name = cdf$contact_name, 
+                         title = cdf$contact_title, 
+                         email = cdf$contact_email, 
+                         phone = cdf$contact_phone)
     
   ) # end taglist
 }
