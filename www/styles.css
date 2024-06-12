@@ -111,12 +111,6 @@ i {
   font-size: 12pt;
 }
 
-.sidebar_phone {
-  color: #00716C;
-  font-family: "Poppins";
-  font-size: 12pt;
-}
-
 .sidebar_email {
   color: #00716C;
   font-family: "Poppins";
@@ -295,6 +289,9 @@ head {
 
 /* left panel module */
 
+.col-sm-4 {
+  padding: 0rem 10rem;
+}
                               
 .focus {
   border-bottom: 2px solid #dedede;
@@ -308,7 +305,7 @@ head {
 .m-menu__title {
   font-size: 22px;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
   color: #2F3030;
 }
 
@@ -371,6 +368,49 @@ head {
       text-align: right;
       float:right;
       transition: .5s ease-in-out;
+}
+
+/* Connect With Us - Contacts */
+/*https://css-generators.com/custom-corners/*/
+
+.contacts {
+  background-color: #F2F2F2;
+  clip-path: polygon(0 80px,80px 0,100% 0,100% 100%,0 100%);
+  padding: 3rem 0rem;
+  background-size: 13rem;
+}
+
+.contacts-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+}
+
+
+.contacts-details p {
+  margin: 0;
+  padding: 0;
+  font-size: 1.75rem;
+}
+
+
+.contacts-icons,
+.contacts-icons div {
+  margin-top: 1rem;
+}
+
+.contacts-icons i {
+  color: #2F3030;
+  font-size: 2rem
+}
+
+.contacts-icons div > a {
+  padding: 0;
+}
+
+.contacts-container > .m-menu__title {
+  margin: 4rem 0rem;
 }
 
 

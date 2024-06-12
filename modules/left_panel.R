@@ -6,8 +6,11 @@
 left_panel_ui <- function(id) {
   ns <- NS(id)
   
+  cdf <- left_panel_info |> 
+    select(starts_with('contact'))
+  
   links_withtags <- withTags(
-    map2(transit_links, names(transit_links), 
+    map2(transit_links[1:8], names(transit_links)[1:8], 
          ~div(class = "links-container", tags$a(class = "links", href = .x, .y, tabindex="0", target = "_blank")))
   )
 
@@ -24,19 +27,43 @@ left_panel_ui <- function(id) {
         tabindex="0"),
     
     div(a(class = "source_url left-panel-url", 
-          "Another Link",
-          href = "https://learntheweb.courses/topics/css-selectors-units-cheat-sheet/",
+          "Transit Planning at PSRC",
+          href = "https://www.psrc.org/our-work/transit",
           target = "_blank"),
         class = "focus",
         tabindex="0"),
     
     bsCollapse(id = "transit-collapse", 
                open = NULL,
-               
                bsCollapsePanel("Transit Agency Websites",
                                links_withtags
                                )
-               )
+               ),
+    
+    # Contact ----
+    div(class = "contacts-container",
+      p(class = "m-menu__title", "Connect With Us"),
+      
+      div(class = "contacts",
+          
+          div(class = "contacts-details",
+              div(  
+                div(p(paste(cdf$contact_name, "-", cdf$contact_title))),
+                
+                div(class = "contacts-icons",
+                    div(icon("envelope"),
+                        tags$a(class = "links", href = paste0("mailto:",cdf$contact_email,"?"), "Email")),
+                    
+                    div(
+                      icon("phone-volume"),  
+                      cdf$contact_phone)
+                ) # end div
+              ) # end div
+          ) # end div
+          
+          
+      ) # end div
+    ) # end div
     
   ) # end taglist
 }
